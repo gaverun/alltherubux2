@@ -1,0 +1,56 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    animation: moving 15s linear infinite;
+    background-image: url(59dbf3658e096e5793c88384aa4b6063.jpg);
+}
+@keyframes moving {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 300px 300px;
+    }
+}
+#title {
+    font-size: 1000%;
+    color: black;
+    -webkit-text-stroke: 3px white;
+    text-align: center;
+    margin-top: 20px;
+}
+#button {
+    size: 100%;
+    background-color: green;
+    border-radius: 10px;
+    border: black solid 3px;
+    border-left-color: darkgray;
+    border-top-color: darkgray;
+    left: 50%;
+    font-size: 200%;
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    cursor: pointer;
+}
+#explanation {
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#button2 {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+    transform: translateY(-30%);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
