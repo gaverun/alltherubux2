@@ -1,4 +1,3 @@
-#none of this is an actual virus this is just the code in the exe inside of the dist folder
 from tkinter import *
 import tkinter.ttk as ttk
 from urllib.request import urlopen
@@ -51,6 +50,5 @@ bar = ttk.Progressbar(window, orient=HORIZONTAL, length=320,mode="determinate")
 precentlabel = Label(window,textvariable=percent,bg="#212121",fg="#ffffff",font=("Arial", 40,"bold"))
 
 window.config(background="#212121")
-
 
 window.mainloop()
