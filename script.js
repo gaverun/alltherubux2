@@ -1,3 +1,4 @@
+const vw = window.innerWidth;
 let openState = false;
 function explanation() {
     const arrow = document.getElementById("explanation2");
@@ -7,13 +8,25 @@ function explanation() {
         return;
     }
     if (openState) {
-        arrow.innerHTML = ">";
-        arrow.style.transform = "translateX(-800%)";
-        explanationText.style.display = "none";
+        if (vw <= 1080) {
+            arrow.style.transform = "translateX(-700%)";
+            arrow.innerHTML = ">";
+            explanationText.style.display = "none";
+        } else {
+            arrow.style.transform = "translateX(-950%)";
+            arrow.innerHTML = ">";
+            explanationText.style.display = "none";
+        }  
     } else {
-        arrow.innerHTML = "v";
-        arrow.style.transform = "translateX(-950%)";
-        explanationText.style.display = "block";
+        if (vw >= 1080) {
+            arrow.innerHTML = "v";
+            arrow.style.transform = "translateX(-700%)";
+            explanationText.style.display = "block";
+        } else {
+            arrow.innerHTML = "v";
+            arrow.style.transform = "translateX(-820%)";
+            explanationText.style.display = "block";
+        }
     }
     openState = !openState;
 }

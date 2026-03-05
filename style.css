@@ -8,6 +8,7 @@ body {
     -webkit-text-stroke: 3px black;
     font-family: "Comic Sans";
     background-color: rgb(231, 231, 231);
+    white-space: nowrap;
 }
 footer {
     font-size: 300%;
@@ -32,13 +33,14 @@ header {
     width: 100%;
 }
 #title {
-    font-size: 10vh;
+    font-size: clamp(2rem, 10vw, 12rem);
     color: white;
     position: absolute;
-    top: 10%;
+    top: 12.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 #button {
     color: white;
@@ -95,4 +97,44 @@ header {
     font-size: 3vh;
     text-align: center;
     transform: translateX(-55%);
+}
+
+@media (max-width: 1080px) {
+    #title {
+        font-size: 11vw;
+        top: 17%;
+        
+    }
+    #explanation2 {
+        font-size: 4vh;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-700%);
+    }
+    #button2 {
+        font-size: 4vh;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #button:active {
+        position: relative;
+        top: 5px;
+    }
+    #explanation3 {
+        font-size: 3vh;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer {
+        font-size: 6vw;
+    }
+    header {
+        font-size: 6vw;
+    }
+    #button {
+        font-size: 7vw;
+        top: 40%;
+    }
 }
