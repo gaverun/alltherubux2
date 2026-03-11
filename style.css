@@ -10,15 +10,34 @@ body {
     background-color: rgb(231, 231, 231);
     white-space: nowrap;
 }
+* {
+    transition: all 0.4s;
+    -webkit-tap-highlight-color: transparent;
+}
+img {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h3 {
+    -webkit-text-stroke: 1px black;
+}
+p {
+    -webkit-text-stroke: 1.5px black;
+}
+h2 {
+    -webkit-text-stroke: 2px black;
+}
 footer {
     font-size: 300%;
     text-align: center;
     background-color: darkgray;
-    height: 60px;
+    height: 61px;
     position: relative;
     left: 0%;
     position: absolute;
-    bottom: 0;
+    bottom: -55%;
     width: 100%;
 }
 header {
@@ -66,37 +85,152 @@ header {
 #div {
     background: darkgray;
 }
-#explanation2 {
+#darkmodelabel {
     color: white;
     -webkit-text-stroke: 1.5px black;
     position: absolute;
-    left: 50%;
-    top: 60%;
-    font-size: 4vh;
-    transform: translateX(-800%);
+    left: 0px;
+    top: 50px;
+    font-size: 40px;
+    transform: translate(50%, -50%);
 }
-#button2 {
-    background-color: transparent;
-    border: none;
-    color: white;
-    -webkit-text-stroke: 1.5px black;
-    font-size: 4vh;
+/* the switch thingy my bob */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
     cursor: pointer;
-    font-family: "Comic Sans";
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, 50%);
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
-#explanation3 {
-    color: white;
-    -webkit-text-stroke: 1px black;
+
+.slider:before {
     position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #1f1f1f;
+}
+
+.slider {
+    box-shadow: 0 0 2px #1f1f1f;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.switch {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    transform: translateY(50%);
+}
+/*qna thingy my bob*/
+#qna-section {
+    position: absolute;
+    top: 120%;
     left: 50%;
-    top: 65%;
-    font-size: 3vh;
+    transform: translate(-50%, -50%);
     text-align: center;
-    transform: translateX(-55%);
+    font-size: xx-large;
+}
+#contact {
+    white-space: wrap;
+}
+
+body.dark {
+    background-color: #1f1f1f;
+    footer {
+        background-color: #000000;
+        color: black;
+        -webkit-text-stroke: 3px lightgray;
+    }
+    header {
+        background-color: #000000;
+        color: black;
+        -webkit-text-stroke: 3px lightgray;
+    }
+    #title {
+        color: black;
+        -webkit-text-stroke: 3px lightgray;
+    }
+    #button {
+        background-color: darkgreen;
+        color: black;
+        -webkit-text-stroke: 1.5px lightgray;
+    }
+    #explanation2 {
+        color: black;
+        -webkit-text-stroke: 1.5px lightgray;
+    }
+    #button2 {
+        color: black;
+        -webkit-text-stroke: 1.5px lightgray;
+    }
+    #explanation3 {
+        color: black;
+        -webkit-text-stroke: 1px lightgray;
+    }
+    #darkmodelabel {
+        color: black;
+        -webkit-text-stroke: 1.5px lightgray;
+    }
+    .slider {
+        box-shadow: 0 0 2px lightgray;
+    }
+    #qna-section {
+        color: black;
+        -webkit-text-stroke-color: lightgray;
+    }
+    h3 {
+        color: black;
+        -webkit-text-stroke-color: lightgray;
+    }
+    p {
+        color: black;
+        -webkit-text-stroke-color: lightgray;
+    }
+    h2 {
+        color: black;
+        -webkit-text-stroke-color: lightgray;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -118,8 +252,8 @@ header {
         transform: translate(-50%, 50%);
     }
     #button:active {
-        position: relative;
-        top: 5px;
+        box-shadow: none;
+        position:relative;
     }
     #explanation3 {
         font-size: 3vh;
